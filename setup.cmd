@@ -3,8 +3,12 @@
 
 set DOWNLOADS_DIR=%USERPROFILE%\Downloads
 
+set PREFIX=D:\Softwares
+@REM set PREFIX=%DOWNLOADS_DIR%
+
+
 set SEVENZIP=C:\"Program Files"\7-Zip\7z.exe
-set PYTHON_DIR=%DOWNLOADS_DIR%\python-3.10.8-amd64-portable
+set PYTHON_DIR=%PREFIX%\python-3.10.8-amd64-portable
 set PYTHON_EXE=%PYTHON_DIR%\python.exe
 
 if not exist %PYTHON_EXE% (
@@ -19,7 +23,7 @@ if exist %PYTHON_EXE% (
 )
 
 
-set GIT_EXE=%DOWNLOADS_DIR%\PortableGit\bin\git.exe
+set GIT_EXE=%PREFIX%\PortableGit\bin\git.exe
 if not exist %GIT_EXE% (
 cd /d "%TEMP%" &&^
 %SystemRoot%\System32\curl.exe "https://github.com/git-for-windows/git/releases/download/v2.42.0.windows.2/PortableGit-2.42.0.2-64-bit.7z.exe" -L -O  &&^

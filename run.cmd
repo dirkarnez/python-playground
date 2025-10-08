@@ -1,5 +1,13 @@
+@REM run as Administrator
 @echo off
-set PYTHON_DIR=%USERPROFILE%\Downloads\python-3.10.8-amd64-portable
+
+set DOWNLOADS_DIR=%USERPROFILE%\Downloads
+
+set PREFIX=D:\Softwares
+@REM set PREFIX=%DOWNLOADS_DIR%
+
+
+set PYTHON_DIR=%PREFIX%\python-3.10.8-amd64-portable
 set PATH=%PYTHON_DIR%;%PYTHON_DIR%\Scripts
 
 python main.py
